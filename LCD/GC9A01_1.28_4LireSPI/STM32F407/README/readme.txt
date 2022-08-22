@@ -3,7 +3,7 @@
 	LCD端口定义在 lcd_init.h 文件中   用户若需要修改端口，除了需要修改 lcd_init.h 文件中的宏定义外还需修改 lcd_init.c 中函数 void LCD_GPIO_Init(void); 对 GPIO 引脚以及时钟初始化部分
 
 	默认接线如下
-	stm32F407			GC9A01
+	GC9A01			stm32F407
 	
 	3V3				VIN
 	GND				GND
