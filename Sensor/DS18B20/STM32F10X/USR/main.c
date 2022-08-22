@@ -1,3 +1,19 @@
+/************************************************
+ 功能:STM32F103ZET6驱动DS18B20采集温度串口1输出
+ 
+ 接线说明
+	DS18B20       STM32F10X
+	VCC           3V3
+	GND           GND
+	D0            PA0
+	
+	串口参数：96N81
+ 
+	代码未封装,仅供测试使用,可自行移植
+ 
+ 作者：JXL
+************************************************/
+
 #include "pbdata.h"
 
 void RCC_Configuration(void)//时钟初始化
@@ -26,8 +42,6 @@ void GPIO_Configuration(void)//GPIO端口配置
  	GPIO_InitStructure.GPIO_Mode=GPIO_Mode_Out_OD;   //设置IO口为开漏输出模式*/ 
 	GPIO_InitStructure.GPIO_Speed=GPIO_Speed_50MHz;
 	GPIO_Init( GPIOA,  &GPIO_InitStructure);
-	
-	
 	
 	//GPIO_InitTypeDef GPIO_InitStructure;
 //	/*PA2,tx*/
@@ -108,8 +122,7 @@ int main(void)
 	NVIC_Configuration();
 	GPIO_SetBits(GPIOB,GPIO_Pin_5);
 	
-	
-		if(init18B20())
+	if(init18B20())
 	{
 		printf("未检测到DS18B20!");
 	}
@@ -117,8 +130,6 @@ int main(void)
 	{
 		printf("OK!");
 	}
-	
-	
 	
 	while(1)
 	{
