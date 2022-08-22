@@ -7,7 +7,7 @@
 	触摸IIC通信引脚定义于 softIIC.h 文件中,中断引脚定义于 CST816.h 文件中
 
 	默认接线如下
-	stm32F10x		GC9A01(touch)
+	GC9A01(touch)	stm32F10x
 	
 	3V3				VIN
 	GND				GND

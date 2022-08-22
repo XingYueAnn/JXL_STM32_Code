@@ -1,3 +1,34 @@
+/************************************************
+ 功能:STM32F103ZET6驱动GC9A01(touch)显示图像,触摸后切换箭头
+ 
+ 接线说明
+	GC9A01(touch)	stm32F10x
+	
+	3V3				VIN
+	GND				GND
+	BL				PB7
+	RST				PA6
+	CS				PB6
+	RS				PA7
+	WR				PA5
+	RD				PA4
+	DB0				PC3
+	DB1				PC4
+	DB2				PC5
+	DB3				PC6
+	DB4				PC7
+	DB5				PC8
+	DB6				PC9
+	DB7				PC10
+	T_RST			---
+	T_INT			PB5
+	T_SCL			PB0		
+	T_SDA			PB1
+	
+ 
+ 作者：JXL
+************************************************/
+
 #include "pbdata.h"
 #include "lcd_init.h"
 #include "lcd.h"
